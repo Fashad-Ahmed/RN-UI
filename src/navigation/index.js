@@ -7,6 +7,7 @@ import Main from '../screens/Main';
 import Home from '../screens/Scooter/Home';
 import Detail from '../screens/Scooter/Detail';
 import Login from '../screens/Login/Login';
+import Typo from '../sample/Typo';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +22,7 @@ const RootNavigation = () => {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Detail" component={Detail} />
         <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Typo" component={Typo} />
       </Stack.Navigator>
     </NavigationContainer>
   );

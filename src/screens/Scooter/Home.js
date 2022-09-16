@@ -16,7 +16,9 @@ const Home = ({navigation}) => {
     <View style={styles.container}>
       <ScrollView>
         <Image source={require('./1.png')} style={styles.img} />
-        <Text style={styles.title}>Max Scooter</Text>
+        <Text style={styles.title} testID={'username'}>
+          Max Scooter
+        </Text>
         <Text style={styles.detail}>
           Nam gravida neque quis consectetur aliquam. Suspendisse sed
           ullamcorper orci, a dictum nunc. Curabitur lobortis felis nec
