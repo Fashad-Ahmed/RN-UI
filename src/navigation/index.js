@@ -9,6 +9,9 @@ import Detail from '../screens/Scooter/Detail';
 import Login from '../screens/Login/Login';
 import Typo from '../sample/Typo';
 
+import InputScreen from '../screens/Integral/InputScreen';
+import ListScreen from '../screens/Integral/ListScreen';
+
 const Stack = createNativeStackNavigator();
 
 const RootNavigation = () => {
@@ -23,6 +26,8 @@ const RootNavigation = () => {
         <Stack.Screen name="Detail" component={Detail} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Typo" component={Typo} />
+        <Stack.Screen name="InputScreen" component={InputScreen} />
+        <Stack.Screen name="ListScreen" component={ListScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -6,30 +6,27 @@ const c = new Animated.Value(0);
 
 const Main = () => {
   const navigation = useNavigation();
-  const [flag, setFlag] = useState(true);
-  const color = c.interpolate({
-    inputRange: [0, 200, 300],
-    outputRange: ['black', 'pink', 'purple'],
-  });
 
-  //   useEffect(() => {
-  //     setTimeout(() => {
-  //       flag ? setFlag(false) : setFlag(true);
-  //     }, 5000);
-  //   }, [flag]);
+  // const color = c.interpolate({
+  //   inputRange: [0, 200, 300],
+  //   outputRange: ['black', 'pink', 'purple'],
+  // });
 
-  useEffect(() => {
-    Animated.timing(c, {
-      toValue: 300,
-      duration: 3000,
-    }).start();
-  }, []);
+  // useEffect(() => {
+  //   Animated.timing(c, {
+  //     toValue: 300,
+  //     duration: 3000,
+  //   }).start();
+  // }, []);
+
   return (
     <Animated.View
       style={{
         flex: 1,
-        justifyContent: 'center',
-        backgroundColor: color,
+        justifyContent: 'space-evenly',
+        marginHorizontal: 20,
+        backgroundColor: 'lightblue',
+        overflow: 'scroll',
       }}>
       <Button
         title="Scooter UI"
@@ -41,6 +38,12 @@ const Main = () => {
         title="Login UI"
         onPress={() => {
           navigation.navigate('Login');
+        }}
+      />
+      <Button
+        title="Integrate"
+        onPress={() => {
+          navigation.navigate('InputScreen');
         }}
       />
     </Animated.View>

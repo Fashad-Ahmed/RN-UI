@@ -30,7 +30,7 @@ const Home = ({navigation}) => {
           style={styles.btn}
           onPress={() => {
             console.log('presss');
-            navigation.navigate('Detail');
+            // navigation.navigate('Detail');
           }}>
           <Text style={styles.txt}>Next</Text>
         </TouchableOpacity>
