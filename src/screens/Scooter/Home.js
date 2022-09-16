@@ -7,11 +7,11 @@ import {
   ScrollView,
 } from 'react-native';
 import React from 'react';
-import {useNavigation} from '@react-navigation/native';
+// import {useNavigation} from '@react-navigation/native';
 //fonts
 
-const Home = () => {
-  const navigation = useNavigation();
+const Home = ({navigation}) => {
+  // const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -27,6 +27,7 @@ const Home = () => {
         <TouchableOpacity
           style={styles.btn}
           onPress={() => {
+            console.log('presss');
             navigation.navigate('Detail');
           }}>
           <Text style={styles.txt}>Next</Text>

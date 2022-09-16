@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home snapShot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "black",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <RCTScrollView>
+    <View>
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/screens/Scooter/1.png",
+          }
+        }
+        style={
+          Object {
+            "resizeMode": "contain",
+            "width": "100%",
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#FFF",
+            "fontFamily": "sans-serif",
+            "fontSize": 45,
+            "fontWeight": "bold",
+            "marginTop": 20,
+          }
+        }
+      >
+        Max Scooter
+      </Text>
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "red",
+            "lineHeight": 20,
+            "marginTop": 10,
+            "paddingHorizontal": 20,
+            "textAlign": "center",
+          }
+        }
+      >
+        Nam gravida neque quis consectetur aliquam. Suspendisse sed ullamcorper orci, a dictum nunc. Curabitur lobortis felis nec efficitur dictum. Nullam pharetra in metus et semper. Sed ornare tincidunt enim. Sed est quam, laoreet in bibendum a, sodales sit amet enim. llamcorper orci, a dictum nunc.
+      </Text>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "red",
+            "borderRadius": 40,
+            "marginTop": 40,
+            "opacity": 1,
+            "width": "70%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "#FFF",
+              "fontSize": 30,
+              "fontWeight": "400",
+            }
+          }
+        >
+          Next
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
