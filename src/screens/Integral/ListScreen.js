@@ -12,25 +12,16 @@ import {useSelector} from 'react-redux';
 
 const ListScreen = ({navigation}) => {
   const test = useSelector(state => state);
-  const {store, persistor} = reduxStore();
 
-  const datum = store.getState();
-
-  console.log('arr', test.objectReducer.userData);
-
-  const [reducerData, setReducerData] = useState([]);
   const renderItem = ({item}) => {
     return (
       <View>
-        <Text style={styles.listButtonText}>{item.name}</Text>
+        <Text style={styles.listButtonText}>
+          {item.name} - {item.place}
+        </Text>
       </View>
     );
   };
-
-  // useEffect(() => {
-  //   setReducerData(datum.objectReducer.userData);
-  //   console.log(reducerData);
-  // }, []);
 
   return (
     <View>
@@ -39,7 +30,7 @@ const ListScreen = ({navigation}) => {
           data={test.objectReducer.userData}
           keyExtractor={item => item.name}
           renderItem={renderItem}
-          ItemSeparatorComponent={() => <View style={{marginBottom: 10}} />}
+          ItemSeparatorComponent={() => <View style={{marginVertical: 10}} />}
         />
       </View>
       <TouchableOpacity

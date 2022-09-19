@@ -20,12 +20,12 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, appReducer);
 
 export default () => {
-  let store = configureStore({
+  const store = configureStore({
     reducer: persistedReducer,
     middleware: getDefaultMiddleware =>
       getDefaultMiddleware({
         serializableCheck: {
-          ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+          ignoredActions: [FLUSH, REHYDRATE, PAUSE, PURGE, REGISTER],
         },
       }),
     devTools: process.env.NODE_ENV !== 'production',

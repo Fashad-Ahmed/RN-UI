@@ -1,23 +1,13 @@
 import {View, Text, Button, Animated} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
-
-const c = new Animated.Value(0);
+import reduxStore from '../../redux/store/index';
 
 const Main = () => {
   const navigation = useNavigation();
+  const {store, persistor} = reduxStore();
 
-  // const color = c.interpolate({
-  //   inputRange: [0, 200, 300],
-  //   outputRange: ['black', 'pink', 'purple'],
-  // });
-
-  // useEffect(() => {
-  //   Animated.timing(c, {
-  //     toValue: 300,
-  //     duration: 3000,
-  //   }).start();
-  // }, []);
+  console.log(store.getState());
 
   return (
     <Animated.View

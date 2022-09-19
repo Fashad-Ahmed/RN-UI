@@ -9,9 +9,9 @@ const App = () => {
   console.log(store);
   return (
     <Provider store={store}>
-      {/* <PersistGate loading={null} persistor={persistor}> */}
-      <RootNavigation />
-      {/* </PersistGate> */}
+      <PersistGate loading={null} persistor={persistor}>
+        <RootNavigation />
+      </PersistGate>
     </Provider>
   );
 };

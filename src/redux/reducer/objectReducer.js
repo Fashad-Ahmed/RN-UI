@@ -1,6 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
+import reduxStore from '../store/index';
 
-let objectSlice = createSlice({
+const objectSlice = createSlice({
   name: 'object',
   initialState: {
     userData: [
@@ -13,8 +14,10 @@ let objectSlice = createSlice({
   reducers: {
     saveData: (state, action) => {
       if (!state.userData.length > 0) {
+        console.log('iff  👉️');
         state.userData = [action.payload];
       } else {
+        console.log('else  👉️');
         state.userData = [...state.userData, action.payload];
       }
 
@@ -31,4 +34,4 @@ let objectSlice = createSlice({
 export const {saveData} = objectSlice.actions;
 
 export default objectSlice.reducer;
-// 👉️
+//

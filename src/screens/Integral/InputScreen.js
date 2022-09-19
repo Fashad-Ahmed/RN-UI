@@ -18,6 +18,7 @@ const InputScreen = ({navigation}) => {
 
   const {store, persistor} = reduxStore();
 
+  console.log(store.getState());
   const dispatch = useDispatch();
   // const {dispatch} = store;
 
