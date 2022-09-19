@@ -7,16 +7,19 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
-import {saveUserData} from '../../redux/reducer/enterReducer';
+
+// import {saveData} from '../../redux/reducer/newReducer';
+import {saveData} from '../../redux/reducer/objectReducer';
 import reduxStore from '../../../src/redux/store/index';
+
 const InputScreen = ({navigation}) => {
   const [name, setName] = useState('');
   const [place, setPlace] = useState('');
 
   const {store, persistor} = reduxStore();
 
-  // const dispatch = useDispatch();
-  const {dispatch} = store;
+  const dispatch = useDispatch();
+  // const {dispatch} = store;
 
   const handleSubmit = () => {
     if (!name.trim() || !place.trim()) {
@@ -24,7 +27,7 @@ const InputScreen = ({navigation}) => {
       return;
     } else {
       dispatch(
-        saveUserData({
+        saveData({
           name,
           place,
         }),

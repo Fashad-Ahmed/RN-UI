@@ -3,7 +3,12 @@ import {createSlice} from '@reduxjs/toolkit';
 const enterSlice = createSlice({
   name: 'auth',
   initialState: {
-    userData: [],
+    userData: [
+      {
+        name: 'ahmed',
+        place: 'karachi',
+      },
+    ],
   },
   reducers: {
     // reset: () => initialState,

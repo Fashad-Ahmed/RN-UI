@@ -1,5 +1,12 @@
-import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import React from 'react';
+import {
+  FlatList,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import React, {useEffect, useState} from 'react';
 import reduxStore from '../../../src/redux/store/index';
 import {useSelector} from 'react-redux';
 
@@ -9,8 +16,9 @@ const ListScreen = ({navigation}) => {
 
   const datum = store.getState();
 
-  console.log('state', test);
+  console.log('arr', test.objectReducer.userData);
 
+  const [reducerData, setReducerData] = useState([]);
   const renderItem = ({item}) => {
     return (
       <View>
@@ -18,11 +26,17 @@ const ListScreen = ({navigation}) => {
       </View>
     );
   };
+
+  // useEffect(() => {
+  //   setReducerData(datum.objectReducer.userData);
+  //   console.log(reducerData);
+  // }, []);
+
   return (
     <View>
       <View>
         <FlatList
-          data={datum}
+          data={test.objectReducer.userData}
           keyExtractor={item => item.name}
           renderItem={renderItem}
           ItemSeparatorComponent={() => <View style={{marginBottom: 10}} />}
